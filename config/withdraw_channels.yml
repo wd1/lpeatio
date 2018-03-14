@@ -16,3 +16,19 @@
   proportion: true
   inuse: true
   type: WithdrawChannelBank
+- id: 500
+  key: ether
+  currency: eth
+  min_confirm: 1
+  max_confirm: 6
+  inuse: true
+  fixed: 12
+  fee: 0.0005
+  type: WithdrawChannelEthereum
+- id: 600
+  key: litecoin 
+  currency: ltc
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelLitecoin

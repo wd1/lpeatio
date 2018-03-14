@@ -24,3 +24,32 @@
     accounts:
       -
         address: 1HjfnJpQmANtuW7yr1ggeDfyfe1kDK7rm3
+- id: 3
+  key: ether
+  code: eth
+  symbol: "฿"
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://192.169.153.139
+  blockchain: https://etherscan.io/tx/#{txid}
+  address_url: https://etherscan.io/address/#{address}
+  assets:
+    accounts:
+      -
+        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        #address: 0x8d05771a6523fe59fda4517ac348cdd6f6862c49
+- id: 4
+  key: litecoin
+  code: ltc
+  symbol: "Ł"
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://Ken:asdfghjkl890ASDFGHJKL*()@127.0.0.1:9332
+  blockchain: http://ltc.blockr.io/tx/info/#{txid}
+  address_url: http://ltc.blockr.io/address/info/#{address}
+  assets:
+    accounts:
+      -
+        address: LUJFBiG8DEcjRJdgUgGzENKfwMMkxucyuZ

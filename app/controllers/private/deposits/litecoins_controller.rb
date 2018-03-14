@@ -1,6 +1,6 @@
 module Private
   module Deposits
-    class EthersController < ::Private::Deposits::BaseController
+    class LitecoinsController < ::Private::Deposits::BaseController
       include ::Deposits::CtrlCoinable
     end
   end
