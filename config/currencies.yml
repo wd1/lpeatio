@@ -31,7 +31,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://192.169.153.139
+  rpc: http://34.244.216.249
   blockchain: https://etherscan.io/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
