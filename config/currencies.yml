@@ -1,13 +1,39 @@
 - id: 1
-  key: renminbi
-  code: cny
-  symbol: "¥"
+  key: euro
+  code: eur
+  symbol: "€"
   coin: false
   precision: 2
   assets:
     accounts:
       -
-        bank: '招商银行'
+        bank: 'bank'
+        address: '6225 0885 6022 3501'
+        password: '111111'
+        tel: '95555'
+- id: 5
+  key: dollar
+  code: usd
+  symbol: "$"
+  coin: false
+  precision: 2
+  assets:
+    accounts:
+      -
+        bank: 'bank'
+        address: '6225 0885 6022 3501'
+        password: '111111'
+        tel: '95555'
+- id: 6
+  key: pound
+  code: gbp
+  symbol: "£"
+  coin: false
+  precision: 2
+  assets:
+    accounts:
+      -
+        bank: 'bank'
         address: '6225 0885 6022 3501'
         password: '111111'
         tel: '95555'
@@ -27,7 +53,7 @@
 - id: 3
   key: ether
   code: eth
-  symbol: "฿"
+  symbol: "Ξ"
   coin: true
   precision: 4
   quick_withdraw_max: 0
