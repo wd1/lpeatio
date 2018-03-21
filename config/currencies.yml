@@ -72,7 +72,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://Ken:asdfghjkl890ASDFGHJKL*()@127.0.0.1:9332
+  rpc: http://litecoin:litecoinpassword123@127.0.0.1:9332
   blockchain: http://ltc.blockr.io/tx/info/#{txid}
   address_url: http://ltc.blockr.io/address/info/#{address}
   assets:
