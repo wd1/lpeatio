@@ -25,7 +25,7 @@
   min_confirm: 1
   max_confirm: 6
 - id: 700
-  key: usdbank
+  key: dollar
   currency: usd
   sort_order: 2
   bank_accounts:
@@ -35,7 +35,7 @@
       holder: 'Your Account Holder'
       account: 'Your Account Number'
 - id: 800
-  key: gbpbank
+  key: pound
   currency: gbp
   sort_order: 2
   bank_accounts:

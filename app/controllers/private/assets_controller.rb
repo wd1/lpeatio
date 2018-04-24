@@ -4,12 +4,22 @@ module Private
 
     def index
       @eur_assets  = Currency.assets('eur')
+      @usd_assets  = Currency.assets('usd')
+      @gbp_assets  = Currency.assets('gbp')
       @btc_proof   = Proof.current :btc
+      @ltc_proof   = Proof.current :ltc
+      @eth_proof   = Proof.current :eth
+      @usd_proof   = Proof.current :usd
       @eur_proof   = Proof.current :eur
+      @gbp_proof   = Proof.current :gbp
 
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
+        @ltc_account = current_user.accounts.with_currency(:ltc).first
+        @ltc_account = current_user.accounts.with_currency(:ltc).first
         @eur_account = current_user.accounts.with_currency(:eur).first
+        @usd_account = current_user.accounts.with_currency(:usd).first
+        @gbp_account = current_user.accounts.with_currency(:gbp).first
       end
     end
 

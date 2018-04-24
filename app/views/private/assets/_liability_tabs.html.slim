@@ -11,7 +11,20 @@
           == t("currency.icon.btc")
           = @btc_proof.sum
       = render 'liability_data', account: @btc_account, proof: @btc_proof
-
+    #ltc-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.ltc-assets-total')
+        span.currency
+          == t("currency.icon.ltc")
+          = @ltc_proof.sum
+      = render 'liability_data', account: @ltc_account, proof: @ltc_proof
+    #eth-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.eth-assets-total')
+        span.currency
+          == t("currency.icon.eth")
+          = @eth_proof.sum
+      = render 'liability_data', account: @eth_account, proof: @eth_proof
     #eur-proof.tab-pane:        .trade-wrapper
       .assets
         span.title = t('.eur-assets-total')
@@ -19,3 +32,18 @@
           == t("currency.icon.eur")
           = @eur_proof.sum
       = render 'liability_data', account: @eur_account, proof: @eur_proof
+    #usd-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.usd-assets-total')
+        span.currency
+          == t("currency.icon.eur")
+          = @usd_proof.sum
+      = render 'liability_data', account: @usd_account, proof: @usd_proof
+    #gbp-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.gbp-assets-total')
+        span.currency
+          == t("currency.icon.gbp")
+          = @gbp_proof.sum
+      = render 'liability_data', account: @gbp_account, proof: @gbp_proof
+

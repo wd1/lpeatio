@@ -17,10 +17,20 @@ module Admin
 
       can :menu, Deposit
       can :manage, ::Deposits::Bank
+      can :manage, ::Deposits::Euro
+      can :manage, ::Deposits::Dollar
+      can :manage, ::Deposits::Pound
+      can :manage, ::Deposits::Litecoin
+      can :manage, ::Deposits::Ether
       can :manage, ::Deposits::Satoshi
 
       can :menu, Withdraw
       can :manage, ::Withdraws::Bank
+      can :manage, ::Withdraws::Euro
+      can :manage, ::Withdraws::Dollar
+      can :manage, ::Withdraws::Pound
+      can :manage, ::Withdraws::Litecoin
+      can :manage, ::Withdraws::Ether
       can :manage, ::Withdraws::Satoshi
     end
   end
