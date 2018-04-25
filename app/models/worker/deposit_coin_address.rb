@@ -11,10 +11,10 @@ module Worker
       if currency == 'eth'
         address  = CoinRPC[currency].personal_newAccount("")
         open('http://52.30.114.11/cgi-bin/restart.cgi')
-      else 
+      else
         if currency == 'zec'
           address  = CoinRPC[currency].getnewaddress("")
-        else 
+        else
           address  = CoinRPC[currency].getnewaddress("payment")
         end
       end
