@@ -10,7 +10,7 @@
           = item_for @pound, :amount
           = item_for @pound, :created_at
           hr.split
-          = item_for @pound, :fund_extra, pound_code_to_name(@pound.fund_extra)
+          = item_for @pound, :fund_extra, bank_code_to_name(@pound.fund_extra)
           = item_for @pound, :fund_uid
           = item_for @pound, :aasm_state_text
 

@@ -12,7 +12,7 @@
           = item_for @pound.member, :name do
             span.fa.fa-copy data-clipboard-text='#{@pound.member.name}' = @pound.member.name
           = item_for @pound, :fund_extra do
-            span.fa.fa-copy data-clipboard-text='#{pound_code_to_name @pound.fund_extra}' = pound_code_to_name @pound.fund_extra
+            span.fa.fa-copy data-clipboard-text='#{bank_code_to_name @pound.fund_extra}' = bank_code_to_name @pound.fund_extra
           = item_for @pound, :fund_uid do
             span.fa.fa-copy data-clipboard-text='#{@pound.fund_uid}' = @pound.fund_uid
           = item_for @pound, :amount do

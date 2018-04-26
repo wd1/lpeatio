@@ -10,7 +10,7 @@
           = item_for @dollar, :amount
           = item_for @dollar, :created_at
           hr.split
-          = item_for @dollar, :fund_extra, dollar_code_to_name(@dollar.fund_extra)
+          = item_for @dollar, :fund_extra, bank_code_to_name(@dollar.fund_extra)
           = item_for @dollar, :fund_uid
           = item_for @dollar, :aasm_state_text
 

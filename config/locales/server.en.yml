@@ -19,8 +19,16 @@ en:
       admin/deposits_grid: Deposits
       admin/withdraws_grid: Withdraws
       deposits/bank: Deposit Bank
+      deposits/euro: Deposit Euro
+      deposits/pound: Deposit Pound
+      deposits/dollar: Deposit Dollar
       withdraws/bank: Withdraw Bank
-      withdraws/satoshi: Withdraw
+      withdraws/euro: Withdraw Euro
+      withdraws/pound: Withdraw Pound
+      withdraws/dollar: Withdraw Dollar
+      withdraws/satoshi: Withdraw Satoshi
+      withdraws/litecoin: Withdraw Litecoin
+      withdraws/ether: Withdraw Ether
     attributes:
       api_token:
         access_key: Access Key
@@ -156,10 +164,88 @@ en:
         amount: Amount
         remark: Remark
         created_at: Created At
+      withdraws/euro:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_source: Euro
+        fund_extra: Euro
+        fund_extra_text: Euro
+        fund_uid: Euro Account
+        sum: Amount
+        fee: Fee
+        amount: Amount
+        remark: Remark
+        created_at: Created At
+      withdraws/dollar:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_source: Dollar
+        fund_extra: Dollar
+        fund_extra_text: Dollar
+        fund_uid: Dollar Account
+        sum: Amount
+        fee: Fee
+        amount: Amount
+        remark: Remark
+        created_at: Created At
+      withdraws/pound:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_source: Pound
+        fund_extra: Pound
+        fund_extra_text: Pound
+        fund_uid: Pound Account
+        sum: Amount
+        fee: Fee
+        amount: Amount
+        remark: Remark
+        created_at: Created At
       deposits/bank:
         created_at: Created At
         holder: Holder
         fund_extra: Sender Bank
+        fund_uid: Sender Account
+        member_sn: Member SN
+        member_name: Sender Name
+        amount: Amount
+        sn: SN
+        state_and_action: State/Action
+        label: Label
+        fund_source: Fund Source
+      deposits/euro:
+        created_at: Created At
+        holder: Holder
+        fund_extra: Sender Euro
+        fund_uid: Sender Account
+        member_sn: Member SN
+        member_name: Sender Name
+        amount: Amount
+        sn: SN
+        state_and_action: State/Action
+        label: Label
+        fund_source: Fund Source
+      deposits/dollar:
+        created_at: Created At
+        holder: Holder
+        fund_extra: Sender Dollar
+        fund_uid: Sender Account
+        member_sn: Member SN
+        member_name: Sender Name
+        amount: Amount
+        sn: SN
+        state_and_action: State/Action
+        label: Label
+        fund_source: Fund Source
+      deposits/pound:
+        created_at: Created At
+        holder: Holder
+        fund_extra: Sender Pound
         fund_uid: Sender Account
         member_sn: Member SN
         member_name: Sender Name
@@ -174,7 +260,47 @@ en:
         amount: Amount
         confirmations: Confirmation
         aasm_state_text: State
+      deposits/litecoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/ether:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
       withdraws/satoshi:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/litecoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/ether:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
@@ -244,6 +370,18 @@ en:
               poor: insufficient
               bank_min: Less 5000.00
         withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/litecoin:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/ether:
           attributes:
             fund_uid:
               blank: Please enter your withdrawal address
@@ -670,6 +808,54 @@ en:
         create:
           notice: Withdrawal request successfully submitted. Use the info below to
             complete the bank transfer.
+      euros:
+        update:
+          notice: Euro Transfer withdrawal application has been submitted, we will
+            process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        destroy:
+          notice: Euro Transfer withdraw has been cancelled, frozen amount has been
+            returned to your account.
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+          allin: All-In
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the euro transfer.
+      pounds:
+        update:
+          notice: Pound Transfer withdrawal application has been submitted, we will
+            process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        destroy:
+          notice: Pound Transfer withdraw has been cancelled, frozen amount has been
+            returned to your account.
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+          allin: All-In
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the pound transfer.
+      dollars:
+        update:
+          notice: Dollar Transfer withdrawal application has been submitted, we will
+            process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        destroy:
+          notice: Dollar Transfer withdraw has been cancelled, frozen amount has been
+            returned to your account.
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+          allin: All-In
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the dollar transfer.
       satoshis:
         destroy:
           notice: Withdraw been canceled, frozen balance has returned to your account
@@ -684,7 +870,37 @@ en:
           manage_fund_source: Manage Fund Source
         create:
           notice: Withdrawal request successfully submitted. Use the info below to
-            complete the bank transfer.
+            complete the satoshi transfer.
+      litecoins:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the litecoin transfer.
+      ethers:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the ether transfer.
     tickets:
       index:
         new_ticket: New Ticket
@@ -1177,7 +1393,29 @@ en:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
           fund_extra: If your bank is no longer in the list, please contact customer
             service
+        euro:
+          member_name: "<span class='text-danger'>Withdraw euro account name must
+            match your name used for real-name authentication</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: If your euro is no longer in the list, please contact customer
+            service
+        dollar:
+          member_name: "<span class='text-danger'>Withdraw dollar account name must
+            match your name used for real-name authentication</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: If your dollar is no longer in the list, please contact customer
+            service
+        pound:
+          member_name: "<span class='text-danger'>Withdraw pound account name must
+            match your name used for real-name authentication</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: If your poound is no longer in the list, please contact customer
+            service
         satoshi:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        litecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ether:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
     creating: Creating...
     updating: Updating...
@@ -1221,10 +1459,39 @@ en:
           sum: Amount
           account_balance: Account Balance
           member_name: Account Holder Name
+        euro:
+          fund_extra: Euro
+          sum: Amount
+          account_balance: Account Balance
+          member_name: Account Holder Name
+        dollar:
+          fund_extra: Dollar
+          sum: Amount
+          account_balance: Account Balance
+          member_name: Account Holder Name
+        pound:
+          fund_extra: Pound
+          sum: Amount
+          account_balance: Account Balance
+          member_name: Account Holder Name
         satoshi:
           fee: Fee
           sum: Amount
           fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        litecoin:
+          fee: Fee
+          sum: Amount
+          fund_uid: Litecoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ether:
+          fee: Fee
+          sum: Amount
+          fund_uid: Ether Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
@@ -1373,7 +1640,70 @@ en:
           reject_confirm: Confirm Reject?
           withdraw: Withdraw
           empty: No Data
+      euros:
+        index:
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
+      dollars:
+        index:
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
+      pounds:
+        index:
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
       satoshis:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      litecoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+      ethers:
         index:
           one: Pending withdrawals
           all: Last 24 hours
@@ -2031,7 +2361,67 @@ en:
       almost_done: Almost Done
       canceled: Canceld
       failed: Failed
+  withdraws/dollar:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: Processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Canceld
+      failed: Failed
+  withdraws/pound:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: Processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Canceld
+      failed: Failed
+  withdraws/euro:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: Processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Canceld
+      failed: Failed
   withdraws/satoshi:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/litecoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ether:
     aasm_state:
       submitting: Submitting
       submitted: Submitted

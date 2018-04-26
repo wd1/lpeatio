@@ -271,5 +271,7 @@ en:
       market_list:
         all: All Market
         cny: CNY Market
+        eur: EUR Market
+        usd: dollar Market
         btc: BTC Market
 
