@@ -1,12 +1,12 @@
-- unless @one_banks.empty?
+- unless @one_euros.empty?
   .panel.panel-primary
     .panel-heading: span = t('.one')
-    = render partial: 'table', locals: {banks: @one_banks}
+    = render partial: 'table', locals: {euros: @one_euros}
 
-- unless @all_banks.empty?
+- unless @all_euros.empty?
   .panel.panel-success
     .panel-heading: span = t('.all')
-    = render partial: 'table', locals: {banks: @all_banks}
+    = render partial: 'table', locals: {euros: @all_euros}
 
-- if @all_banks.empty? and @one_banks.empty?
+- if @all_euros.empty? and @one_euros.empty?
   h3.text-info.text-center = t('.empty')
